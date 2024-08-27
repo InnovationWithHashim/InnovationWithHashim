@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useAuth } from "../store/Auth";
+import { useAuth ,API } from "../store/Auth";
 import "./adminupdate.css";
 import {  toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +8,7 @@ import {  toast } from 'react-toastify';
 
 export const AdminUpdate = () => {
   const params = useParams();
-  const { authorizationToken ,API } = useAuth(); 
+  const { authorizationToken } = useAuth(); 
   const [data, setData] = useState({
     username: "",
     email: "",
@@ -19,6 +19,7 @@ export const AdminUpdate = () => {
     try {
       // Remove the "Bearer " prefix from the token if it's present
       const token = authorizationToken.replace("Bearer ", "");
+      console.log(token);
 
       const response = await fetch(`${API}/api/admin/users/${params.id}`, {
         method: "GET",
@@ -30,7 +31,7 @@ export const AdminUpdate = () => {
       if (response.ok) {
         const userData = await response.json();
         setData(userData);
-       
+        console.log(userData);
 
       } else {
         console.error("Unable to fetch user data", response.statusText);
@@ -67,7 +68,7 @@ export const AdminUpdate = () => {
       });
 
       if (response.ok) {
-        
+        console.log("User data updated successfully");
         toast.success("User data updated successfully");
         return <Navigate to="/admin/users" />;
 

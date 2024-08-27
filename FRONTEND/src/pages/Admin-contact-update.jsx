@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useAuth } from "../store/Auth";
+import { useAuth ,API } from "../store/Auth";
 import "./adminupdate.css";
 import { Navigate } from "react-router-dom";
 import {  toast } from 'react-toastify';
@@ -8,7 +8,7 @@ import {  toast } from 'react-toastify';
 
 export const AdminContactUpdate = () => {
   const params = useParams();
-  const { authorizationToken ,API } = useAuth(); // Assuming this returns the full "Bearer <token>"
+  const { authorizationToken } = useAuth(); // Assuming this returns the full "Bearer <token>"
   const [data, setData] = useState({
     username: "",
     email: "",
@@ -29,6 +29,7 @@ export const AdminContactUpdate = () => {
       if (response.ok) {
         const contactData = await response.json();
         setData(contactData);
+        console.log("Fetched contact data:", contactData);
       } else {
         console.error("Unable to fetch contact data:", response.statusText);
       }
