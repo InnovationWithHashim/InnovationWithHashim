@@ -10,10 +10,11 @@ const contactRoute = require("./routes/contact-routes");
 const adminRoute=require("./routes/admin-route");
 
 const corsOptions = {
-  origin: true,
+  origin: ["https://innovationwithhashim.site","https://www.innovationwithhashim.site"],
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
+
 
 
 app.use(express.json());
