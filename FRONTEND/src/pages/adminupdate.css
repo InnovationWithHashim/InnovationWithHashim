@@ -1,0 +1,73 @@
+.admin-update-container {
+    padding: 20px;
+    background-color: #1e1e2f;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.admin-update-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.admin-update-container span {
+    color: #ffd700;
+}
+
+.admin-update-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-update-container input,
+.admin-update-container textarea {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #2e2e3e;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.admin-update-container input::placeholder,
+.admin-update-container textarea::placeholder {
+    color: #bbb;
+}
+
+.admin-update-container input:focus,
+.admin-update-container textarea:focus {
+    outline: none;
+    border-color: #ffd700;
+}
+
+.admin-update-container textarea {
+    min-height: 100px;
+    max-height: 200px;
+    overflow-y: auto;
+    resize: vertical;
+    white-space: normal; /* Ensure text wraps normally */
+    word-wrap: break-word; /* Break long words if necessary */
+}
+
+.admin-update-container button {
+    padding: 12px 15px;
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-update-container button:hover {
+    background-color: green;
+    color: #fff;
+}

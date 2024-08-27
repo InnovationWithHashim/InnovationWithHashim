@@ -1,0 +1,229 @@
+.heading h1{
+    font-size: 70px;
+    color: #ffd700;
+    text-transform: capitalize;
+    margin: 10px 0 20px 50px;
+}
+.slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  
+}
+
+.swiper {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.card-article {
+    width: 700px;
+    height:500px;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    position: relative;
+    padding-top: 1.5rem;
+    margin-bottom: -0.75rem;
+}
+
+.card-data {
+    background-color: black;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.Slider .card-img img {
+    margin-left: 3.5%;
+    width: 650px;
+    position: relative;
+    z-index: 5;
+}
+
+.card-name {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.card-description {
+    font-weight: 500;
+    font-size: 2.2rem;
+    margin-bottom: 1.75rem;
+    color:#c6c9d8bf;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-transform:capitalize; 
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffd700;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #ffd700;
+}
+.card-name span{
+    color: #ffd700;
+}
+.slider-btn {
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Media query for 1024px */
+@media (max-width: 1024px) {
+    .heading h1 {
+        font-size: 70px;
+        margin: 20px 0 30px 50px;
+    }
+
+    .card-article {
+        width: 700px;
+        height:500px;
+    }
+
+    .card-name {
+        font-size: 2.2rem;
+    }
+
+    .card-description {
+        font-size: 1.4rem;
+    }
+
+    .Slider .card-img img {
+        margin-left: 3.5%;
+    width: 650px;
+    }
+}
+
+/* Media query for 768px */
+@media (max-width: 768px) {
+    .heading h1 {
+        font-size: 70px;
+        margin: 10px 0 40px 70px;
+    }
+
+    .card-article {
+        width: 650px;
+        height: 500px;
+    }
+
+    .card-name {
+        font-size: 3rem;
+    }
+
+    .card-description {
+        font-size: 1.8rem;
+    }
+
+    .Slider .card-img img {
+        width: 600px;
+        margin-left: 4%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 20px; /* Reduce the width */
+        height: 20px; /* Reduce the height */
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 40px; /* Reduce the arrow icon size */
+    }
+}
+
+/* Media query for 600px */
+@media (max-width: 600px) {
+    .heading h1 {
+        font-size: 70px;
+        margin: 10px 0 30px 20px;
+    }
+
+    .card-article {
+        width: 500px;
+        height: 400px;
+    }
+
+    .card-name {
+        font-size: 2.5rem;
+    }
+
+    .card-description {
+        font-size: 1.6rem;
+    }
+
+    .Slider .card-img img {
+        width: 450px;
+        margin-left: 5%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 20px; /* Reduce the width */
+        height: 20px; /* Reduce the height */
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 35px; /* Reduce the arrow icon size */
+    }
+}
+
+/* Media query for 480px */
+@media (max-width: 480px) {
+    .heading h1 {
+        font-size: 55px;
+        margin: 10px 0 30px 10px;
+    }
+
+    .card-article {
+        width: 350px;
+        height: 300px;
+    }
+
+    .card-name {
+        font-size: 2rem;
+    }
+
+    .card-description {
+        font-size: 1rem;
+        line-height: 18px;
+    }
+
+    .Slider .card-img img {
+        width: 330px;
+        margin-left: 3%;
+    }
+
+    .swiper {
+        max-width: 100%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 20px; /* Reduce the width */
+        height: 20px; /* Reduce the height */
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 18px; /* Reduce the arrow icon size */
+    }
+}
+

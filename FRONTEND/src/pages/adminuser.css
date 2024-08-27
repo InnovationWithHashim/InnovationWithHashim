@@ -1,0 +1,79 @@
+/* adminuser.css */
+
+.admin-panel {
+    padding: 20px;
+    background-color: #1e1e2f;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+  
+.admin-panel h1 {
+    font-size: 40px;
+    color: #fff;
+    margin: 20px 0 30px 30px;
+    text-transform: capitalize;
+}
+
+.admin-panel span {
+    color: #ffd700;
+}
+
+.admin-panel table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.admin-panel th, 
+.admin-panel td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.admin-panel th {
+    background-color: #ffd700; /* Gold background for table headers */
+    color: #000;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.admin-panel td {
+    background-color: #2e2e3e;
+    border-bottom: 1px solid #444;
+    font-size: 1.2rem;
+    word-wrap: break-word; /* Ensures long words wrap to the next line */
+    white-space: normal; /* Allows text to wrap normally */
+}
+
+.admin-panel a {
+    color: #ffd700;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.admin-panel a:hover {
+    text-decoration: underline;
+}
+
+.admin-panel button {
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin-panel button:hover {
+    background-color: #ff3333;
+    color: #fff;
+}
+
+/* Specific styling for the message column */
+.admin-panel .message-column {
+    max-width: 300px; /* Adjust this value as needed */
+    word-wrap: break-word; /* Wraps long words to the next line */
+    white-space: normal; /* Allows text to wrap normally */
+}

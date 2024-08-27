@@ -1,0 +1,126 @@
+/* Main heading styles */
+.main-heading {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #333; /* Subtle border to separate from content */
+}
+
+.main-heading h1 {
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.main-heading span {
+    color: #ffd700; /* Gold highlight color */
+}
+
+.main-heading p {
+    color: #c6c9d8bf;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+/* Overall layout */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #1e1e1e; /* Slightly lighter dark color for sidebar */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    border-right: 5px solid #333; /* Border to separate sidebar from content */
+    position: relative; /* Ensure that the sidebar is properly positioned */
+}
+
+/* Sidebar list styles */
+.sidebar ul {
+    margin-top: 50px;
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    flex-direction: column;
+    gap: 50px; /* Add some space between the items */
+}
+
+.sidebar ul li {
+    margin-bottom: 0; /* Remove the bottom margin to keep them aligned in a row */
+    position: relative; /* Required for hover effect */
+    flex: 1; /* Ensures the items take up equal space */
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff; /* White text color for links */
+    font-weight: bold;
+    display: block;
+    padding: 10px 20px; /* Increase padding for better spacing */
+    border-radius: 5px;
+    background-color: #444; /* Slightly lighter background for links */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    text-align: center; /* Center the text within the buttons */
+}
+
+.sidebar ul li a.active {
+    background-color: #ffd700; /* Gold background for active link */
+    color: #000; /* Black text for active link */
+}
+
+/* Hover effect */
+.sidebar ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust the distance from the bottom */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the line thickness */
+    background-color: #ffd700; /* Line color */
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.5s; /* Add smooth transition */
+}
+
+.sidebar ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #121212; /* Dark background to match the overall layout */
+    color: #e0e0e0; /* Light gray text color for content */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none; /* Remove border on mobile */
+        border-bottom: 1px solid #333; /* Add bottom border instead */
+        display: flex; /* Ensure sidebar items are still row-wise */
+        justify-content: center; /* Center items on mobile */
+    }
+    
+    .sidebar ul {
+        flex-direction: column; /* Stack items vertically on mobile */
+        gap: 5px; /* Adjust gap for mobile */
+    }
+    
+    .sidebar ul li {
+        width: 100%; /* Full width on mobile */
+    }
+}
