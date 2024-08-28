@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useAuth ,API } from "../store/Auth";
+import { useAuth  } from "../store/Auth";
 import "./adminupdate.css";
 import {  toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +8,7 @@ import {  toast } from 'react-toastify';
 
 export const AdminUpdate = () => {
   const params = useParams();
-  const { authorizationToken } = useAuth(); 
+  const { authorizationToken ,API} = useAuth(); 
   const [data, setData] = useState({
     username: "",
     email: "",

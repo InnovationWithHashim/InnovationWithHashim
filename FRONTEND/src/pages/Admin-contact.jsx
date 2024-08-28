@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useAuth ,API } from "../store/Auth";
+import { useAuth  } from "../store/Auth";
 import {Link} from "react-router-dom";
 import "./adminuser.css"
 import {  toast } from 'react-toastify';
@@ -7,7 +7,7 @@ import {  toast } from 'react-toastify';
 
 export const AdminContact = () => {
   const [contacts, setContacts] = useState([]);
-  const { authorizationToken } = useAuth(); // Get authorizationToken from AuthContext
+  const { authorizationToken ,API } = useAuth(); // Get authorizationToken from AuthContext
 
   const getAllContactData = async () => {
     try {
