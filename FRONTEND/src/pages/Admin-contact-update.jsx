@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useAuth  } from "../store/Auth";
+import { useAuth } from "../store/Auth";
 import "./adminupdate.css";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {  toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 

@@ -7,7 +7,7 @@ import {  toast } from 'react-toastify';
 
 export const AdminUser = () => {
   const [users, setUsers] = useState([]);
-  const { authorizationToken , API } = useAuth(); // Get authorizationToken from AuthContext
+  const { authorizationToken ,API } = useAuth(); // Get authorizationToken from AuthContext
 
   const getAllUserData = async () => {
     try {

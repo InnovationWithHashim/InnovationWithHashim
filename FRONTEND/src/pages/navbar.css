@@ -1,7 +1,7 @@
 /* Base styles (large screens) */
 .container {
   max-width: 140rem;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

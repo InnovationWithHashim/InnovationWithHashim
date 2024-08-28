@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useAuth  } from "../store/Auth";
+import { useAuth } from "../store/Auth";
 import "./adminupdate.css";
 import {  toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +8,7 @@ import {  toast } from 'react-toastify';
 
 export const AdminUpdate = () => {
   const params = useParams();
-  const { authorizationToken ,API} = useAuth(); 
+  const { authorizationToken ,API } = useAuth(); 
   const [data, setData] = useState({
     username: "",
     email: "",
@@ -58,7 +58,7 @@ export const AdminUpdate = () => {
     try {
       const token = authorizationToken.replace("Bearer ", "");
 
-      const response = await fetch(`${API}/api/admin/users/update/${params.id}`, {
+      const response = await fetch(`http://localhost:5000/api/admin/users/update/${params.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
